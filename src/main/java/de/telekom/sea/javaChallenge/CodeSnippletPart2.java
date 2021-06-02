@@ -17,13 +17,17 @@ public class CodeSnippletPart2 implements ListOfDataTypes {
 		}
 	}
 
-	public List<Datatype> getAll() {
+	private List<Datatype> getAll() {
 		List<Datatype> list = new ArrayList<Datatype>();
 
 		for (int i = 0; i < listOfPrimDatatypes.length; i++) {
 			list.add(listOfPrimDatatypes[i]);
 		}
 		return list;
+	}
+	
+	public int getDatatypeSize(int i) {
+		return listOfPrimDatatypes[i].getLenght();
 	}
 
 	public boolean add(Datatype dt) {
@@ -32,11 +36,7 @@ public class CodeSnippletPart2 implements ListOfDataTypes {
 		return true;
 	}
 
-	public int getDatatypeSize(int i) {
-		return listOfPrimDatatypes[i].getLenght();
-	}
-
-	public void datatypes() {
+	private void datatypes() {
 		inputDatatypes("int", (int) 32);
 		inputDatatypes("double", (int) 64);
 		inputDatatypes("long", (int) 64);
@@ -47,7 +47,7 @@ public class CodeSnippletPart2 implements ListOfDataTypes {
 		inputDatatypes("boolean", (int) 1);
 	}
 
-	public void inputDatatypes(String datatype, int bit) {
+	private void inputDatatypes(String datatype, int bit) {
 
 		Datatype dt = new Datatype(datatype, bit);
 		add(dt);
