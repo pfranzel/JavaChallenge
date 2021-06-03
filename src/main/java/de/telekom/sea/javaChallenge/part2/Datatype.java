@@ -1,4 +1,4 @@
-package de.telekom.sea.javaChallenge;
+package de.telekom.sea.javaChallenge.part2;
 
 public class Datatype implements Comparable<Datatype> {
 	private String datatype;

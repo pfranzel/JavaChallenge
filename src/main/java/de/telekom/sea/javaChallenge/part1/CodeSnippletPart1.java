@@ -1,4 +1,4 @@
-package de.telekom.sea.javaChallenge;
+package de.telekom.sea.javaChallenge.part1;
 
 public class CodeSnippletPart1 {
 

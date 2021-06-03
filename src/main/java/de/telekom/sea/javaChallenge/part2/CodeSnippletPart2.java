@@ -1,4 +1,4 @@
-package de.telekom.sea.javaChallenge;
+package de.telekom.sea.javaChallenge.part2;
 
 import java.util.List;
 import java.util.ArrayList;

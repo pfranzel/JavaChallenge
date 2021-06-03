@@ -1,4 +1,4 @@
-package de.telekom.sea.javaChallenge;
+package de.telekom.sea.javaChallenge.part4;
 
 import java.util.HashMap;
 import java.util.Map;
