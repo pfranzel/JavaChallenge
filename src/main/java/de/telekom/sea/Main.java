@@ -1,9 +1,9 @@
 package de.telekom.sea;
 
-import de.telekom.sea.javaChallenge.CodeSnippletPart1;
-import de.telekom.sea.javaChallenge.CodeSnippletPart2;
-import de.telekom.sea.javaChallenge.CodeSnippletPart3;
-import de.telekom.sea.javaChallenge.CodeSnippletPart4;
+import de.telekom.sea.javaChallenge.part1.CodeSnippletPart1;
+import de.telekom.sea.javaChallenge.part2.CodeSnippletPart2;
+import de.telekom.sea.javaChallenge.part3.CodeSnippletPart3;
+import de.telekom.sea.javaChallenge.part4.CodeSnippletPart4;
 
 public class Main {
 

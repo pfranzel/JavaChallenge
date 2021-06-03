@@ -1,6 +1,10 @@
-package de.telekom.sea.javaChallenge;
+package de.telekom.sea.javaChallenge.part2;
 
 import java.util.List;
+
+import de.telekom.sea.javaChallenge.Datatype;
+import de.telekom.sea.javaChallenge.ListOfDataTypes;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
