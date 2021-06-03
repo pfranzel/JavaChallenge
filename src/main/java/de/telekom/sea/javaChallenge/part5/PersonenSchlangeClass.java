@@ -1,6 +1,5 @@
 package de.telekom.sea.javaChallenge.part5;
 
-import java.util.EmptyStackException;
 import java.util.LinkedList;
 
 public class PersonenSchlangeClass extends BaseObject implements PersonenSchlange {
@@ -21,8 +20,10 @@ public class PersonenSchlangeClass extends BaseObject implements PersonenSchlang
 			if (personen.size() != maxParticipants) {
 				personen.add(person);
 			} else {
-				throw new RuntimeException("List is full!");
+				throw new IndexOutOfBoundsException("List is full!");
 			}
+		} catch (IndexOutOfBoundsException e) {
+			throw new IndexOutOfBoundsException();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -41,8 +42,10 @@ public class PersonenSchlangeClass extends BaseObject implements PersonenSchlang
 			if (!empty()) {
 				return personen.getFirst();
 			} else {
-				throw new RuntimeException("List is empty, no Object returned!");
+				throw new IndexOutOfBoundsException("List is empty, no Object returned!");
 			}
+		} catch (IndexOutOfBoundsException e) {
+			throw new IndexOutOfBoundsException();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -61,8 +64,10 @@ public class PersonenSchlangeClass extends BaseObject implements PersonenSchlang
 			if (!empty()) {
 				return personen.removeFirst();
 			} else {
-				throw new RuntimeException("List is empty - cannot remove an item.");
+				throw new IndexOutOfBoundsException("List is empty - cannot remove an item.");
 			}
+		} catch (IndexOutOfBoundsException e) {
+			throw new IndexOutOfBoundsException();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -109,8 +114,8 @@ public class PersonenSchlangeClass extends BaseObject implements PersonenSchlang
 	}
 
 	/**
-	 * Searches for the given Object Person in the list.
-	 * Throws an exception if list is empty
+	 * Searches for the given Object Person in the list. Throws an exception if list
+	 * is empty
 	 * 
 	 * @param Object Person
 	 * @return int-value of the current position in the list. "0" if list is empty
@@ -127,8 +132,12 @@ public class PersonenSchlangeClass extends BaseObject implements PersonenSchlang
 					return i + 1;
 				}
 			} else {
-				throw new RuntimeException("List is empty - cannot search for the item.");
+				throw new IndexOutOfBoundsException("List is empty - cannot search for the item.");
 			}
+		} catch (IndexOutOfBoundsException e) {
+			throw new IndexOutOfBoundsException();
+		} catch (RuntimeException e) {
+			throw new RuntimeException();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
