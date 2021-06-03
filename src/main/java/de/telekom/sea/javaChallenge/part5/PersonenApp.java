@@ -27,7 +27,7 @@ public class PersonenApp extends BaseObject {
 			PersonImpl person_7 = new PersonImpl("Donald", "Duck");
 			PersonImpl person_8 = new PersonImpl("Ronny", "Feller");
 			PersonImpl person_9 = new PersonImpl("Carola", "Schubs");
-
+			
 			System.out.println("Is PersonenSchlange empty? \t\t\t--> " + personen.empty());
 
 			personen.add(person_1);
