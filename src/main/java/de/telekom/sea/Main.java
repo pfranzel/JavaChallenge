@@ -3,6 +3,7 @@ package de.telekom.sea;
 import de.telekom.sea.javaChallenge.CodeSnippletPart1;
 import de.telekom.sea.javaChallenge.CodeSnippletPart2;
 import de.telekom.sea.javaChallenge.CodeSnippletPart3;
+import de.telekom.sea.javaChallenge.CodeSnippletPart4;
 
 public class Main {
 
@@ -19,10 +20,13 @@ public class Main {
 		
 		System.out.println();
 		System.out.println("Part3 solution:");
-		
 		CodeSnippletPart3 csp3 = new CodeSnippletPart3();
 		csp3.snippletPart3();
 		
+		System.out.println();
+		System.out.println("Part4 solution:");
+		CodeSnippletPart4 csp4 = new CodeSnippletPart4();
+		csp4.snippletPart4();
 	}
 
 }
