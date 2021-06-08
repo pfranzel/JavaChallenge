@@ -16,7 +16,7 @@ public class PersonenApp extends BaseObject {
 
 		try {
 			//Process general behavior
-			PersonenSchlangeClass personen = new PersonenSchlangeClass();
+			PersonenSchlangeImpl personen = new PersonenSchlangeImpl();
 
 			PersonImpl person_1 = new PersonImpl("Peter", "Pan");
 			PersonImpl person_2 = new PersonImpl("Jan", "Wehr");

@@ -41,9 +41,9 @@ public class Main {
         PersonenApp persApp = PersonenApp.getRootApp();
         persApp.run(args);
 		
-		// Start Part 7 - Generic Solution
+		// Start Part 5.1 - Generic Solution
 		System.out.println();
-		System.out.println("Part6 solution:");
+		System.out.println("Part5.1 Generic solution:");
 
 		GenericApp t = GenericApp.getRootApp();
 		t.run(args);

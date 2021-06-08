@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import de.telekom.sea.javaChallenge.queue5g.Queue;
 
-public class PersonenSchlangeClass extends BaseObject implements PersonenSchlange {
+public class PersonenSchlangeImpl extends BaseObject implements PersonenSchlange {
 
 	private int maxParticipants = 8;
 	private LinkedList<Person> personen = new LinkedList<Person>();

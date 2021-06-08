@@ -12,11 +12,11 @@ import de.telekom.sea.javaChallenge.queue5g.*;
 
 public class GenericTest {
 
-	private Generic<Person> cut;
+	private GenericImpl<Person> cut;
 
 	@BeforeEach
 	void setup() {
-		cut = new Generic<Person>();
+		cut = new GenericImpl<Person>();
 	}
 
 	@Test

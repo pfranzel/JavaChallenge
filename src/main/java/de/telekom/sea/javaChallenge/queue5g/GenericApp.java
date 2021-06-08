@@ -20,7 +20,7 @@ public class GenericApp extends BaseObject {
 
 		try {
 			//Process general behavior
-			Generic<Person> t = new Generic<Person>();
+			GenericImpl<Person> t = new GenericImpl<Person>();
 
 			PersonImpl person_1 = new PersonImpl("Peter", "Pan");
 			PersonImpl person_2 = new PersonImpl("Jan", "Wehr");

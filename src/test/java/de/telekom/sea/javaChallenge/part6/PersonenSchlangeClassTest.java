@@ -6,15 +6,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.*;
 
 import de.telekom.sea.javaChallenge.part5.PersonImpl;
-import de.telekom.sea.javaChallenge.part5.PersonenSchlangeClass;
+import de.telekom.sea.javaChallenge.part5.PersonenSchlangeImpl;
 
 public class PersonenSchlangeClassTest {
 
-	private PersonenSchlangeClass cut;
+	private PersonenSchlangeImpl cut;
 
 	@BeforeEach
 	void setup() {
-		cut = new PersonenSchlangeClass();
+		cut = new PersonenSchlangeImpl();
 	}
 
 	@Test
