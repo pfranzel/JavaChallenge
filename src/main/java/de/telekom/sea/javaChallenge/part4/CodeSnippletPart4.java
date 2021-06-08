@@ -19,8 +19,6 @@ public class CodeSnippletPart4 {
 		Map<String, Long> map = new HashMap<>();
 		map = countCharacters(poem.toLowerCase());
 		map.forEach((k, v) -> System.out.printf("%s: %s%n", k, v));
-//		countCharacters(sortString(poem));
-//		countCharacters(poem);
 	}
 
 	private Map<String, Long> countCharacters(String s) {
@@ -28,7 +26,6 @@ public class CodeSnippletPart4 {
 				"r", "s", "t", "u", "v", "w", "x", "y", "z" };
 		Map<String, Long> map = new HashMap<>();
 		for (String ch : alphachars) {
-			// Map<String, Long> map = new HashMap<>();
 			map.put(ch, countOccurrencesOfChar(s, ch.charAt(0)));
 		}
 		return map;

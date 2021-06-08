@@ -1,36 +1,36 @@
-package de.telekom.sea.javaChallenge.part5;
+package de.telekom.sea.javaChallenge.queue5g;
 
 import java.util.LinkedList;
 
-import de.telekom.sea.javaChallenge.queue5g.Queue;
+public class Generic<T> implements Queue<T> {
 
-public class PersonenSchlangeClass extends BaseObject implements Queue {
-
-	private int maxParticipants = 8;
-	private LinkedList<Person> personen = new LinkedList<Person>();
+	private final int maxParticipants = 8;
+	private LinkedList<T> t = new LinkedList<T>();
 
 	/**
-	 * Add an object of typ person to the Linked List. If the list is full it will
+	 * Add an generic object to the Linked List. If the list is full it will
 	 * be noticed by a RuntimeExection
 	 * 
-	 * @param person Object to be be added to the FIFO-List
+	 * @param generic object to be be added to the FIFO-List
 	 * @return No return value is provided.
 	 */
 	@Override
 	public void add(T t) {
 		try {
-			if (personen.size() != maxParticipants) {
-				personen.add(person);
+			if (this.t.size() != maxParticipants) {
+				this.t.add(t);
 			} else {
 				throw new IndexOutOfBoundsException("List is full!");
 			}
-		} catch (IndexOutOfBoundsException e) {
+		} catch (
+
+		IndexOutOfBoundsException e) {
 			throw new IndexOutOfBoundsException();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
+	
 	/**
 	 * Head returns the first Element of the List. If the list is empty it will be
 	 * noticed by a RuntimeExection
@@ -39,10 +39,10 @@ public class PersonenSchlangeClass extends BaseObject implements Queue {
 	 * @return Object Person / null in case of empty list
 	 */
 	@Override
-	public Person head() {
+	public T head() {
 		try {
 			if (!empty()) {
-				return personen.getFirst();
+				return this.t.getFirst();
 			} else {
 				throw new IndexOutOfBoundsException("List is empty, no Object returned!");
 			}
@@ -55,16 +55,16 @@ public class PersonenSchlangeClass extends BaseObject implements Queue {
 	}
 
 	/**
-	 * Removes the first Person Object from the list and return exact this element
+	 * Removes the first generic Object from the list and return exact this element
 	 * 
 	 * @param none
 	 * @return Object Person / null in case of empty list
 	 */
 	@Override
-	public Person remove() {
+	public T remove() {
 		try {
 			if (!empty()) {
-				return personen.removeFirst();
+				return t.removeFirst();
 			} else {
 				throw new IndexOutOfBoundsException("List is empty - cannot remove an item.");
 			}
@@ -76,14 +76,6 @@ public class PersonenSchlangeClass extends BaseObject implements Queue {
 		return null;
 	}
 
-	// Kommentar:
-	// Ich bin mir zugegebenermaßen nicht sicher, worauf Thorsten hinaus möchte.
-	// Als "Randverhalten" liefert die Methode in diesem Fall eine Exception + null.
-	// Hierdurch ist es zumindest grundsätlich gegeben, eine fehlerhafte Ausführung
-	// abzufangen.
-	// Wie die genaue Behandlung des ganzen dann aussieht steht auf einem anderen
-	// Blatt - in diesem Fall sollte es aber erst einmal reichen.
-
 	/**
 	 * Removes all Objects from the list
 	 * 
@@ -93,7 +85,7 @@ public class PersonenSchlangeClass extends BaseObject implements Queue {
 	@Override
 	public void reset() {
 		try {
-			personen.clear();
+			t.clear();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -108,7 +100,7 @@ public class PersonenSchlangeClass extends BaseObject implements Queue {
 	@Override
 	public boolean empty() {
 		try {
-			return personen.isEmpty();
+			return t.isEmpty();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -124,10 +116,10 @@ public class PersonenSchlangeClass extends BaseObject implements Queue {
 	 *         and "-1" if searched person Object does not exist
 	 */
 	@Override
-	public int search(Person person) {
+	public int search(T t) {
 		try {
 			if (!empty()) {
-				int i = personen.indexOf(person);
+				int i = this.t.indexOf(t);
 				if (i == -1) {
 					throw new RuntimeException("No such element/object in the list");
 				} else {
@@ -145,5 +137,4 @@ public class PersonenSchlangeClass extends BaseObject implements Queue {
 		}
 		return 0;
 	}
-
 }
