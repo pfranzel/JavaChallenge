@@ -1,8 +1,9 @@
 package de.telekom.sea.javaChallenge.queue5g;
 
 import java.util.LinkedList;
+import de.telekom.sea.javaChallenge.part5.BaseObject;
 
-public class Generic<T> implements Queue<T> {
+public class Generic<T> extends BaseObject implements Queue<T> {
 
 	private final int maxParticipants = 8;
 	private LinkedList<T> t = new LinkedList<T>();

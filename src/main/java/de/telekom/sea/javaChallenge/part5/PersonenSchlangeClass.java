@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import de.telekom.sea.javaChallenge.queue5g.Queue;
 
-public class PersonenSchlangeClass extends BaseObject implements Queue {
+public class PersonenSchlangeClass extends BaseObject implements PersonenSchlange {
 
 	private int maxParticipants = 8;
 	private LinkedList<Person> personen = new LinkedList<Person>();
@@ -17,7 +17,7 @@ public class PersonenSchlangeClass extends BaseObject implements Queue {
 	 * @return No return value is provided.
 	 */
 	@Override
-	public void add(T t) {
+	public void add(Person person) {
 		try {
 			if (personen.size() != maxParticipants) {
 				personen.add(person);

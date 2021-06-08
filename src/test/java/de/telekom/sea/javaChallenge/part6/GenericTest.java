@@ -5,16 +5,18 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.*;
 
+import de.telekom.sea.javaChallenge.part5.Person;
 import de.telekom.sea.javaChallenge.part5.PersonImpl;
-import de.telekom.sea.javaChallenge.part5.PersonenSchlangeClass;
+import de.telekom.sea.javaChallenge.queue5g.*;
 
-public class PersonenSchlangeClassTest {
 
-	private PersonenSchlangeClass cut;
+public class GenericTest {
+
+	private Generic<Person> cut;
 
 	@BeforeEach
 	void setup() {
-		cut = new PersonenSchlangeClass();
+		cut = new Generic<Person>();
 	}
 
 	@Test
